@@ -13,6 +13,7 @@
         "laravel/socialite": "^5.18",
         "laravel/tinker": "^2.10.1",
         "socialiteproviders/discord": "^4.2",
+        "socialiteproviders/manager": "^4.8",
         "socialiteproviders/steam": "^4.3",
         "tightenco/ziggy": "^2.0"
     },
