@@ -22,7 +22,7 @@ class SocialiteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app->evetns->listen(
+        $this->app->events->listen(
             SocialiteWasCalled::class,
             [DiscordExtendSocialite::class, 'handle']
         );
