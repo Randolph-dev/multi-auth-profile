@@ -24,4 +24,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/auth/login-options', [App\Http\Controllers\Auth\SocialiteController::class,'loginOptions']) ->name('login.options');
+Route::get('/auth/{provider}', [App\Http\Controllers\Auth\SocialiteController::class,'redirect']) ->name('socialite.redirect');
+Route::get('/auth/{provider}/callback', [App\Http\Controllers\Auth\SocialiteController::class,'callback']) ->name('socialite.callback');
+
+Route::get('/login', function () {
+    return Inertia::render('Auth/Login');
+})->name('login');
+
 require __DIR__.'/auth.php';
